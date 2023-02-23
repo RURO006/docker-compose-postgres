@@ -4,7 +4,7 @@ services:
         image: postgres
         restart: always
         environment:
-            POSTGRES_PASSWORD: example
+            POSTGRES_PASSWORD: pZWIkzG%#pvP0F7TslHPRQdZ1s&PuS
         ports:
             - 5432:5432
         networks:
@@ -16,8 +16,8 @@ services:
         ports:
             - 8080:80
         environment:
-            PGADMIN_DEFAULT_EMAIL: user@domain.com
-            PGADMIN_DEFAULT_PASSWORD: example
+            PGADMIN_DEFAULT_EMAIL: p26763067@gmail.com
+            PGADMIN_DEFAULT_PASSWORD: YR4GAn2NAjxwTmvc5I$Y8BBL@ldoNH
         networks:
             - postgres-network
 networks:
