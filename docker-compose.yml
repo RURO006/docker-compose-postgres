@@ -1,0 +1,25 @@
+services:
+    postgres:
+        container_name: postgres
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_PASSWORD: example
+        ports:
+            - 5432:5432
+        networks:
+            - postgres-network
+    pgadmin4:
+        container_name: pgadmin4
+        image: dpage/pgadmin4
+        restart: always
+        ports:
+            - 8080:80
+        environment:
+            PGADMIN_DEFAULT_EMAIL: user@domain.com
+            PGADMIN_DEFAULT_PASSWORD: example
+        networks:
+            - postgres-network
+networks:
+    postgres-network:
+        name: postgres-network
