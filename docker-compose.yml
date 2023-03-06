@@ -9,6 +9,11 @@ services:
             - 5432:5432
         networks:
             - postgres-network
+        # 限制docker log檔案大小
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
     pgadmin4:
         container_name: pgadmin4
         image: dpage/pgadmin4
@@ -20,6 +25,11 @@ services:
             PGADMIN_DEFAULT_PASSWORD: YR4GAn2NAjxwTmvc5I$Y8BBL@ldoNH
         networks:
             - postgres-network
+        # 限制docker log檔案大小
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
 networks:
     postgres-network:
         name: postgres-network
